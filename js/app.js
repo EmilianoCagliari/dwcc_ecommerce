@@ -99,6 +99,11 @@ function navSelected( navItem ) {
         if( e.id == navItem ) {
             e.classList.add("active");            
             document.querySelector(".nav_title_banner h2").innerHTML = navItem;
+            const imgSrc = document.querySelector(".nav_title_banner img").src;
+            const newImgSrc = `${imgSrc.substring(0, (imgSrc.lastIndexOf('/') + 1 ))}${navItem}.jpg`;
+
+            document.querySelector(".nav_title_banner img").src = newImgSrc;
+            console.log("img", );
             // document.querySelector(".nav_title_banner img").src = navItem;
 
         } else {

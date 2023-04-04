@@ -11,7 +11,7 @@
 body {
   width: 80%;
   margin: 0px auto;
-  min-width: 1080px;
+  min-width: 1024px;
 }
 
 /* ================================== HEADER ================================== */
@@ -106,7 +106,7 @@ nav {
 
 /* unvisited link */
 .nav_list > a:link {
-  color: red;
+  color: black;
 }
 
 /* visited link */
@@ -269,8 +269,8 @@ nav {
   grid-template-columns: 55% 45%;
   grid-template-rows: 75% 25%;
   grid-template-areas:
-    "l r"
-    "f f";
+  "l r"
+  "f f";
   width: 320px;
   height: 220px;
   background-color: #574fb4;
@@ -301,36 +301,36 @@ nav {
     right bottom,
     from(rgba(0, 0, 0, 1)),
     to(rgba(0, 0, 0, 0))
-  );
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.card_offer_main_right {
-  background-color: #574fb4;
-  border-radius: 0px 5px 0px 0px;
-  grid-area: r;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 5px;
-}
-.card_offer_main_right > h3 {
-  color: white;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.5);
-  margin: 0px;
-}
-.card_offer_main_right > p {
-  color: white;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
-}
-
-.card_offer_main_footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: #383280;
+    );
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+  
+  .card_offer_main_right {
+    background-color: #574fb4;
+    border-radius: 0px 5px 0px 0px;
+    grid-area: r;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 5px;
+  }
+  .card_offer_main_right > h3 {
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.5);
+    margin: 0px;
+  }
+  .card_offer_main_right > p {
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
+  }
+  
+  .card_offer_main_footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #383280;
   border-radius: 0px 0px 5px 5px;
   grid-area: f;
 }
@@ -340,7 +340,7 @@ nav {
   height: 100px;
   /* border: 1px solid black; */
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
-
+  
   position: relative;
 }
 
@@ -374,8 +374,9 @@ nav {
 }
 
 .card_product {
+  position: relative;
   width: 250px;
-  height: 300px;
+  height: 320px;
   min-width: 250px;
   min-height: 300px;
   border: 2px solid #574fb4;
@@ -384,12 +385,23 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px;
 }
+
+.card_img_and_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .card_product_img {
   width: 90%;
-  height: 40%;
+  height: 65%;
   /* padding: 10px; */
-  margin: 5px;
+  /* margin: 15px; */
   background-color: #d3d3d3;
   border-radius: 5px;
   /* border: 1px solid black; */
@@ -403,7 +415,7 @@ nav {
 }
 
 .card_product_info {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   font-weight: 800;
   font-size: 14px;
   padding: 10px;
@@ -413,9 +425,10 @@ nav {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  height: 25%;
-  margin-bottom: 10px;
+  /* height: 25%; */
+  /* margin-bottom: 10px; */
 }
+
 .card_product_price {
   display: flex;
   align-items: center;
@@ -428,23 +441,200 @@ nav {
   font-weight: bold;
 }
 
+/* =================== Precio con 2x1 =================== */
+
+.card_product_banner_2x1 {
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  transform: rotate(-45deg);
+  background-color: #34BE31;
+  box-shadow: 4px 0px 4px rgb(0, 0, 0, 0.3);
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_product_banner_2x1 > p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+} 
+
+/* =================== Precio con descuento CLUB =================== */
+
+.card_product_banner_club {
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  transform: rotate(-45deg);
+  background-color: #ff6a00;
+  box-shadow: 4px 0px 4px rgb(0, 0, 0, 0.3);
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_product_banner_club > p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+} 
+
+.card_product_price_club {
+  width: 40%;
+  /* margin: 5px; */
+  padding: 10px;
+
+} 
+
+.card_product_price_club > p {
+  padding: 2px;
+  font-weight: 800;
+  text-decoration: line-through;
+}
+
+.card_product_price_club_discount {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 90%;
+  /* height: 90%; */
+  border: 2px solid #FF6B00;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: 800;
+
+}
+.card_product_price_club_discount > p:first-child {
+  color: #FF6B00;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+  align-self: self-start;
+
+}
+
+/* =================== Precio con descuento PREMIUM =================== */
+
+
+
+
+.card_product_banner_premium {
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  transform: rotate(-45deg);
+  background-color: #E74646;
+  box-shadow: 4px 0px 4px rgb(0, 0, 0, 0.3);
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_product_banner_premium > p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+} 
+
+.card_product_price_premium {
+  width: 40%;
+  /* margin: 5px; */
+  padding: 10px;
+
+} 
+
+.card_product_price_premium > p {
+  padding: 2px;
+  font-weight: 800;
+  text-decoration: line-through;
+}
+
+.card_product_price_premium_discount {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 90%;
+  /* height: 90%; */
+  border: 2px solid #E74646;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: 800;
+
+}
+.card_product_price_premium_discount > p:first-child {
+  color: #E74646;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+  align-self: self-start;
+
+}
+
+
 .card_product_buy {
   display: flex;
-  align-items: center;
+  align-items: end;
   flex: 1;
+  justify-content: space-evenly;
   padding: 10px;
 }
 .card_product_buy > p {
   font-size: 12px;
+  width: 60%;
   font-weight: 800;
 }
 
 .btn_product_buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background-color: #574fb4;
-  border: 1px solid #574fb4;
+  border: 2px solid #574fB4;
   border-radius: 50px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn_product_buy:hover {
+  background-color: #ffffff;
+
+}
+.btn_product_buy:hover > svg {
+  stroke: #574fB4;
+}
+
+/* ================================== FOOTER ================================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  background-color: #574fB4;
 }

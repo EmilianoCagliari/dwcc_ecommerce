@@ -97,7 +97,10 @@ function navSelected( navItem ) {
 
     navItems.forEach( e => {
         if( e.id == navItem ) {
-            e.classList.add("active");
+            e.classList.add("active");            
+            document.querySelector(".nav_title_banner h2").innerHTML = navItem;
+            // document.querySelector(".nav_title_banner img").src = navItem;
+
         } else {
             e.classList.remove("active");
         }

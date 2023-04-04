@@ -59,7 +59,7 @@
             <nav>
                 <ul class="nav_list">
                     <a href="">
-                        <li class="nav_item">
+                        <li class="nav_item active" id="supermercado">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -77,13 +77,11 @@
                                 </path>
                                 <path d="M11 7h2"></path>
                             </svg>
-                            <p>
-                                Supermercado
-                            </p>
+                            Supermercado                            
                         </li>
                     </a>
                     <a href="">
-                        <li class="nav_item active">
+                        <li class="nav_item"  id="bodega">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="icon icon-tabler icon-tabler-glass-full"
                                 width="24" height="24" viewBox="0 0 24 24"
@@ -100,13 +98,11 @@
                                 <path d="M6 10a5 5 0 0 1 6 0a5 5 0 0 0 6 0">
                                 </path>
                             </svg>
-                            <p>
-                                Bodega
-                            </p>
+                            Bodega
                         </li>
                     </a>
                     <a href="">
-                        <li class="nav_item">
+                        <li class="nav_item" id="moda">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -117,13 +113,11 @@
                                     d="M15 4l6 2v5h-3v8a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-8h-3v-5l6 -2a3 3 0 0 0 6 0">
                                 </path>
                             </svg>
-                            <p>
-                                Moda
-                            </p>
+                            Moda
                         </li>
                     </a>
                     <a href="">
-                        <li class="nav_item">
+                        <li class="nav_item" id="tecnologia">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -137,13 +131,11 @@
                                 <path d="M9 16v4"></path>
                                 <path d="M15 16v4"></path>
                             </svg>
-                            <p>
-                                Tecnologia
-                            </p>
+                            Tecnologia
                         </li>
                     </a>
                     <a href="">
-                        <li class="nav_item">
+                        <li class="nav_item" id="gaming">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -160,13 +152,11 @@
                                 <path d="M7 10h2"></path>
                                 <path d="M14 10h2"></path>
                             </svg>
-                            <p>
-                                Gaming
-                            </p>
+                            Gaming
                         </li>
                     </a>
                     <a href="">
-                        <li class="nav_item">
+                        <li class="nav_item" id="hogar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -182,17 +172,16 @@
                                 <path d="M6 19v2"></path>
                                 <path d="M18 19v2"></path>
                             </svg>
-                            <p>
-                                Hogar
-                            </p>
+                            Hogar
                         </li>
                     </a>
                 </ul>
             </nav>
             <div class="user_basket_area">
+
                 <ul class="user_basket_list">
-                    <a href="">
-                        <li class="user_basket_item">
+                    <a href="#" >
+                        <li class="user_basket_item" id="user_login">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -223,7 +212,7 @@
                         </li>
                     </a>
                     <a href="">
-                        <li class="user_basket_item">
+                        <li class="user_basket_item" id="basket">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -239,12 +228,24 @@
                                 <path d="M17 17h-11v-14h-2"></path>
                                 <path d="M6 5l14 1l-1 7h-13"></path>
                             </svg>
-                            <p>
-                                0,00 €
-                            </p>
+                            0,00 €
                         </li>
                     </a>
                 </ul>
+
+                <div class="user_login_panel" id="user_login_panel">                
+                    <p>Para disfrutar de los descuentos y beneficios, inicie sesión o regístrese.</p>
+
+                    <div class="user_login_panel_buttons">
+                        <button class="btn">
+                            Registrese
+                        </button>
+                        <button class="btn">
+                            Iniciar sesion
+                        </button>
+                    </div>
+                    
+                </div>
             </div>
 
         </div>
@@ -651,5 +652,7 @@
 
     </footer>
 </body>
+
+<script src="js/app.js"></script>
 
 </html>

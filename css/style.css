@@ -98,6 +98,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 .nav {
   display: flex;
@@ -186,7 +187,7 @@ nav {
 
 /* unvisited link */
 .user_basket_list > a:link {
-  color: red;
+  color: black;
 }
 
 /* visited link */

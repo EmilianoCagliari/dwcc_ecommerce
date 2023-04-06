@@ -1,4 +1,5 @@
 
+
 window.onload = () => {
     console.log("Cargado DOM");
 
@@ -15,6 +16,13 @@ window.onload = () => {
           } else {
             uPanel.style.display = "none";
           }
+
+
+        document.querySelector("#user_register").addEventListener("click", () => {
+            window.location = "/register.html";
+            registrationPage();
+            console.log("register button");
+        });
         // console.log("display", uPanel.computedStyleMap().get("display").value );
         
     });
@@ -28,6 +36,15 @@ window.onload = () => {
     });
 
 }
+
+// const { range, filter, map } = rxjs;
+
+// range(1, 200)
+//   .pipe(
+//     filter((x) => x % 2 === 1),
+//     map((x) => x + x)
+//   )
+//   .subscribe((x) => console.log(x));
 
 
 function pageNav(e) { 
@@ -103,7 +120,7 @@ function navSelected( navItem ) {
             const newImgSrc = `${imgSrc.substring(0, (imgSrc.lastIndexOf('/') + 1 ))}${navItem}.jpg`;
 
             document.querySelector(".nav_title_banner img").src = newImgSrc;
-            console.log("img", );
+            // console.log("img", );
             // document.querySelector(".nav_title_banner img").src = navItem;
 
         } else {
@@ -111,4 +128,10 @@ function navSelected( navItem ) {
         }
     });
 
+}
+
+
+
+function registrationPage() {
+    
 }

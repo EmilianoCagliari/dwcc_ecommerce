@@ -5,8 +5,9 @@ window.onload = () => {
 
     document.querySelector("nav").addEventListener("click", pageNav );
 
-
-
+    document.querySelector("#login_cancel").addEventListener("click", () => {
+        document.querySelector(".modal").style.display =  "none";
+    });
     document.querySelector("#user_login").addEventListener("click", (e) => {
         e.preventDefault();
         const uPanel = document.querySelector("#user_login_panel");
@@ -18,13 +19,21 @@ window.onload = () => {
           }
 
 
-        document.querySelector("#user_register").addEventListener("click", () => {
+        document.querySelector("#btn_user_register").addEventListener("click", () => {
             window.location = "/register.html";
             registrationPage();
             console.log("register button");
         });
+
+        
+
+        document.querySelector("#btn_user_login").addEventListener("click", () => {
+            uPanel.style.display = "none";
+            document.querySelector(".modal").style.display = "flex";
+        })
         // console.log("display", uPanel.computedStyleMap().get("display").value );
         
+
     });
 
     document.addEventListener('mouseup', function(e) {
@@ -33,6 +42,7 @@ window.onload = () => {
         if (!uPanel.contains(e.target)) {
             uPanel.style.display = 'none';
         }
+
     });
 
 }

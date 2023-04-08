@@ -265,10 +265,33 @@
         <!-- Registration secction -->
 
         <form class="register_form" action="" method="post">
-
-            <label for="full_name">
-                <input type="text" class="input" id="full_name" name="full_name">
+            <label for="full_name">Nombre Completo
+                <input type="text" class="input" id="full_name" name="full_name" placeholder="Nombre y Apellidos">
             </label>
+            <label for="dni">DNI
+                <input type="text" class="input" id="dni" name="dni" placeholder="12345678X">
+            </label>
+            <label for="address">Direccion
+                <input type="text" class="input" id="address" name="address" placeholder="Calle 123, Provincia, Pais">
+            </label>
+            <label for="phone">Telefono
+                <input type="tel" class="input" id="phone" name="phone" placeholder="123-1231-23">
+            </label>
+            <label for="birthday">Fecha de Nacimiento
+                <input type="date" class="input" id="birthday" name="birthday">
+            </label>
+            <label for="family_members">Unidad Familiar
+                <input type="number" min="1" max="4" class="input" id="family_members" name="family_members" placeholder="1">
+            </label>
+            <label for="loyalty_number">Nro. Fidelización
+                <input type="text" class="input" id="loyalty_number" name="loyalty_number" placeholder="ES123456789">
+            </label>
+
+            <br>
+            <div>
+                <input class="btn" type="button" value="Registrarse">
+                <input class="btn" type="button" value="Volver">
+            </div>
 
         </form>
 

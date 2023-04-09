@@ -1,0 +1,71 @@
+Supermercado:
+
+Leche desnatada
+Pan de trigo integral
+Arroz basmati
+Yogur de frutas
+Pasta de trigo integral
+Sopa enlatada de tomate
+Salmón enlatado
+Galletas de avena y pasas
+Aceite de oliva virgen extra
+
+Moda:
+
+Camiseta de manga corta
+Vestido de verano
+Pantalones vaqueros ajustados
+Chaqueta de cuero
+Bufanda de lana
+Zapatillas deportivas
+Vestido de noche elegante
+Camisa de botones de manga larga
+Gorro de punto
+
+Tecnología:
+
+Teléfono inteligente
+Ordenador portátil
+Auriculares inalámbricos
+Cámara digital
+Tableta
+Reloj inteligente
+Impresora multifunción
+Enrutador inalámbrico
+Altavoz Bluetooth
+
+Bodega:
+
+Vino tinto reserva
+Whisky escocés de malta
+Ron añejo
+Cerveza artesanal
+Vermut rojo
+Champagne brut
+Vodka premium
+Tequila reposado
+Licor de café
+
+Gaming:
+
+Consola de videojuegos
+Videojuego popular
+Ratón para juegos
+Teclado mecánico para juegos
+Auriculares para juegos
+Alfombrilla para ratón de juegos
+Silla para juegos
+Controlador de juego
+Volante para juegos de carreras
+
+Hogar:
+
+Juego de sartenes antiadherentes
+Cuchillos de cocina de acero inoxidable
+Juego de funda de edredón
+Lámpara de mesa con luz regulable
+Aspiradora sin bolsa
+Alfombra de área
+Juego de toallas de baño
+Plantas de interior
+Organizador de zapatos colgante

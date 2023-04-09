@@ -1,0 +1,500 @@
+{
+  "supermercado": [
+    {
+      "title": "Leche desnatada",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/leche_desnatada.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Pan de trigo integral",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/pan_integral.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Arroz basmati",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/arroz_bismati.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Yogur de frutas",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/yogurt_frutas.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Pasta de trigo integral",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/pasta_integral.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Tomate triturado",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/tomate_triturado.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Salmón enlatado",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/salmon_enlatado.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Galletas de avena",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/galleta_avena.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    },
+    {
+      "title": "Aceite de oliva virgen extra",
+      "price": 1.50,
+      "img_url": "assets/products/supermercado/aceite_oliva.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "supermercado"
+    }
+  ],
+  "moda": [
+    {
+      "title": "Camiseta de manga corta",
+      "price": 1.50,
+      "img_url": "assets/products/moda/camiseta_manga_corta.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Vestido de verano",
+      "price": 1.50,
+      "img_url": "assets/products/moda/vestido_verano.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Pantalones vaqueros ajustados",
+      "price": 1.50,
+      "img_url": "assets/products/moda/pantalon_ajustado.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Chaqueta de cuero",
+      "price": 1.50,
+      "img_url": "assets/products/moda/chaqueta_cuero.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Bufanda de lana",
+      "price": 1.50,
+      "img_url": "assets/products/moda/bufanda_lana.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Zapatillas deportivas",
+      "price": 1.50,
+      "img_url": "assets/products/moda/zapatilla_deportiva.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Vestido de noche elegante",
+      "price": 1.50,
+      "img_url": "assets/products/moda/vestido_noche.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Camisa manga larga con botones",
+      "price": 1.50,
+      "img_url": "assets/products/moda/camisa_manga_larga.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    },
+    {
+      "title": "Gorro de punto",
+      "price": 1.50,
+      "img_url": "assets/products/moda/gorro_punto.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "moda"
+    }
+  ],
+  "tecnologia": [
+    {
+      "title": "Teléfono inteligente",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/smartphone.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Ordenador portátil",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/laptop.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Auriculares inalámbricos",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/headphones_bluetooth.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Cámara digital",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/digital_camera.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Tablet",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/tablet.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Reloj inteligente",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/smartwatch.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Impresora multifunción",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/printer.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Enrutador inalámbrico",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/router.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    },
+    {
+      "title": "Altavoz Bluetooth",
+      "price": 1.50,
+      "img_url": "assets/products/tecnologia/speaker_bluetooth.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "tecnologia"
+    }
+  ],
+  "bodega": [
+    {
+      "title": "Vino tinto reserva",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/wine.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Whisky escocés de malta",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/whisky.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Ron añejo",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/ron.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Cerveza artesanal",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/beer.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Vermut rojo",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/vermut_rosso.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Champagne brut",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/champagne.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Vodka premium",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/vodka.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Tequila reposado",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/tequila.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    },
+    {
+      "title": "Licor de café",
+      "price": 1.50,
+      "img_url": "assets/products/bodega/licor_cafe.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "bodega"
+    }
+  ],
+  "gaming": [
+    {
+      "title": "Consola de videojuegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/console.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Videojuego popular",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/zelda.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Ratón para juegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/mouse.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Teclado mecánico para juegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/mechanic_keyboard.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Auriculares para juegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/headset_gaming.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Alfombrilla para ratón de juegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/mouse_pad.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Silla para juegos",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/gaming_chair.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Control Xbox elite",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/controller.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Volante para juegos de carreras",
+      "price": 1.50,
+      "img_url": "assets/products/gaming/gaming_wheel.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    }
+  ],
+  "hogar": [
+    {
+      "title": "Sarten antiadherente",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/sarten.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Cuchillos de acero inoxidable",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/knives.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Juego de funda de edredón",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/fundas_cama.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Lámpara de mesa con luz regulable",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/lamp.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Aspiradora sin bolsa",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/aspiradora.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Alfombra de área",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/carpet.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Juego de toallas de baño",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/towels.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Plantas de interior",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/plant.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    },
+    {
+      "title": "Organizador de zapatos colgante",
+      "price": 1.50,
+      "img_url": "assets/products/hogar/organizer.jpg",
+      "off2x1": false,
+      "club": false,
+      "premium": false,
+      "category": "gaming"
+    }
+  ]
+}

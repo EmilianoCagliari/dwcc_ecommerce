@@ -70,6 +70,7 @@ function pageNav(e, def = "supermercado") {
       if (e !== undefined) {
         navSelected(e.target.id);
       }
+      removeGridProducts();
 
       setTimeout(() => {
         loading(false);

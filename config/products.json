@@ -2,7 +2,7 @@
   "supermercado": [
     {
       "title": "Leche desnatada",
-      "price": 1.50,
+      "price": 1.27,
       "img_url": "assets/products/supermercado/leche_desnatada.jpg",
       "off2x1": false,
       "club": false,
@@ -11,34 +11,34 @@
     },
     {
       "title": "Pan de trigo integral",
-      "price": 1.50,
+      "price": 1.24,
       "img_url": "assets/products/supermercado/pan_integral.jpg",
-      "off2x1": false,
+      "off2x1": true,
       "club": false,
       "premium": false,
       "category": "supermercado"
     },
     {
       "title": "Arroz basmati",
-      "price": 1.50,
+      "price": 0.98,
       "img_url": "assets/products/supermercado/arroz_bismati.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "supermercado"
     },
     {
       "title": "Yogur de frutas",
-      "price": 1.50,
+      "price": 1.10,
       "img_url": "assets/products/supermercado/yogurt_frutas.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "supermercado"
     },
     {
       "title": "Pasta de trigo integral",
-      "price": 1.50,
+      "price": 1.12,
       "img_url": "assets/products/supermercado/pasta_integral.jpg",
       "off2x1": false,
       "club": false,
@@ -47,7 +47,7 @@
     },
     {
       "title": "Tomate triturado",
-      "price": 1.50,
+      "price": 0.96,
       "img_url": "assets/products/supermercado/tomate_triturado.jpg",
       "off2x1": false,
       "club": false,
@@ -56,7 +56,7 @@
     },
     {
       "title": "Salmón enlatado",
-      "price": 1.50,
+      "price": 1.43,
       "img_url": "assets/products/supermercado/salmon_enlatado.jpg",
       "off2x1": false,
       "club": false,
@@ -65,7 +65,7 @@
     },
     {
       "title": "Galletas de avena",
-      "price": 1.50,
+      "price": 1.16,
       "img_url": "assets/products/supermercado/galleta_avena.jpg",
       "off2x1": false,
       "club": false,
@@ -74,7 +74,7 @@
     },
     {
       "title": "Aceite de oliva virgen extra",
-      "price": 1.50,
+      "price": 1.78,
       "img_url": "assets/products/supermercado/aceite_oliva.jpg",
       "off2x1": false,
       "club": false,
@@ -85,7 +85,7 @@
   "moda": [
     {
       "title": "Camiseta de manga corta",
-      "price": 1.50,
+      "price": 6.99,
       "img_url": "assets/products/moda/camiseta_manga_corta.jpg",
       "off2x1": false,
       "club": false,
@@ -94,7 +94,7 @@
     },
     {
       "title": "Vestido de verano",
-      "price": 1.50,
+      "price": 17.99,
       "img_url": "assets/products/moda/vestido_verano.jpg",
       "off2x1": false,
       "club": false,
@@ -103,7 +103,7 @@
     },
     {
       "title": "Pantalones vaqueros ajustados",
-      "price": 1.50,
+      "price": 11.50,
       "img_url": "assets/products/moda/pantalon_ajustado.jpg",
       "off2x1": false,
       "club": false,
@@ -112,16 +112,16 @@
     },
     {
       "title": "Chaqueta de cuero",
-      "price": 1.50,
+      "price": 34.99,
       "img_url": "assets/products/moda/chaqueta_cuero.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "moda"
     },
     {
       "title": "Bufanda de lana",
-      "price": 1.50,
+      "price": 3.20,
       "img_url": "assets/products/moda/bufanda_lana.jpg",
       "off2x1": false,
       "club": false,
@@ -130,7 +130,7 @@
     },
     {
       "title": "Zapatillas deportivas",
-      "price": 1.50,
+      "price": 39.99,
       "img_url": "assets/products/moda/zapatilla_deportiva.jpg",
       "off2x1": false,
       "club": false,
@@ -139,16 +139,16 @@
     },
     {
       "title": "Vestido de noche elegante",
-      "price": 1.50,
+      "price": 79.99,
       "img_url": "assets/products/moda/vestido_noche.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "moda"
     },
     {
       "title": "Camisa manga larga con botones",
-      "price": 1.50,
+      "price": 10.99,
       "img_url": "assets/products/moda/camisa_manga_larga.jpg",
       "off2x1": false,
       "club": false,
@@ -157,7 +157,7 @@
     },
     {
       "title": "Gorro de punto",
-      "price": 1.50,
+      "price": 5.90,
       "img_url": "assets/products/moda/gorro_punto.jpg",
       "off2x1": false,
       "club": false,
@@ -168,7 +168,7 @@
   "tecnologia": [
     {
       "title": "Teléfono inteligente",
-      "price": 1.50,
+      "price": 289.99,
       "img_url": "assets/products/tecnologia/smartphone.jpg",
       "off2x1": false,
       "club": false,
@@ -177,16 +177,16 @@
     },
     {
       "title": "Ordenador portátil",
-      "price": 1.50,
+      "price": 549.99,
       "img_url": "assets/products/tecnologia/laptop.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "tecnologia"
     },
     {
       "title": "Auriculares inalámbricos",
-      "price": 1.50,
+      "price": 75.10,
       "img_url": "assets/products/tecnologia/headphones_bluetooth.jpg",
       "off2x1": false,
       "club": false,
@@ -195,16 +195,16 @@
     },
     {
       "title": "Cámara digital",
-      "price": 1.50,
+      "price": 199.50,
       "img_url": "assets/products/tecnologia/digital_camera.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "tecnologia"
     },
     {
       "title": "Tablet",
-      "price": 1.50,
+      "price": 329.99,
       "img_url": "assets/products/tecnologia/tablet.jpg",
       "off2x1": false,
       "club": false,
@@ -213,7 +213,7 @@
     },
     {
       "title": "Reloj inteligente",
-      "price": 1.50,
+      "price": 174.99,
       "img_url": "assets/products/tecnologia/smartwatch.jpg",
       "off2x1": false,
       "club": false,
@@ -222,16 +222,16 @@
     },
     {
       "title": "Impresora multifunción",
-      "price": 1.50,
+      "price": 129.40,
       "img_url": "assets/products/tecnologia/printer.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "tecnologia"
     },
     {
       "title": "Enrutador inalámbrico",
-      "price": 1.50,
+      "price": 219.99,
       "img_url": "assets/products/tecnologia/router.jpg",
       "off2x1": false,
       "club": false,
@@ -240,10 +240,10 @@
     },
     {
       "title": "Altavoz Bluetooth",
-      "price": 1.50,
+      "price": 119.90,
       "img_url": "assets/products/tecnologia/speaker_bluetooth.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "tecnologia"
     }
@@ -251,52 +251,52 @@
   "bodega": [
     {
       "title": "Vino tinto reserva",
-      "price": 1.50,
+      "price": 2.70,
       "img_url": "assets/products/bodega/wine.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "bodega"
     },
     {
       "title": "Whisky escocés de malta",
-      "price": 1.50,
+      "price": 12.35,
       "img_url": "assets/products/bodega/whisky.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "bodega"
     },
     {
       "title": "Ron añejo",
-      "price": 1.50,
+      "price": 7.80,
       "img_url": "assets/products/bodega/ron.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "bodega"
     },
     {
       "title": "Cerveza artesanal",
-      "price": 1.50,
+      "price": 5.50,
       "img_url": "assets/products/bodega/beer.jpg",
-      "off2x1": false,
+      "off2x1": true,
       "club": false,
       "premium": false,
       "category": "bodega"
     },
     {
       "title": "Vermut rojo",
-      "price": 1.50,
+      "price": 7.29,
       "img_url": "assets/products/bodega/vermut_rosso.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "bodega"
     },
     {
       "title": "Champagne brut",
-      "price": 1.50,
+      "price": 18.15,
       "img_url": "assets/products/bodega/champagne.jpg",
       "off2x1": false,
       "club": false,
@@ -305,25 +305,25 @@
     },
     {
       "title": "Vodka premium",
-      "price": 1.50,
+      "price": 16.20,
       "img_url": "assets/products/bodega/vodka.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "bodega"
     },
     {
       "title": "Tequila reposado",
-      "price": 1.50,
+      "price": 35.40,
       "img_url": "assets/products/bodega/tequila.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "bodega"
     },
     {
       "title": "Licor de café",
-      "price": 1.50,
+      "price": 6.39,
       "img_url": "assets/products/bodega/licor_cafe.jpg",
       "off2x1": false,
       "club": false,
@@ -334,7 +334,7 @@
   "gaming": [
     {
       "title": "Consola de videojuegos",
-      "price": 1.50,
+      "price": 189.90,
       "img_url": "assets/products/gaming/console.jpg",
       "off2x1": false,
       "club": false,
@@ -343,7 +343,7 @@
     },
     {
       "title": "Videojuego popular",
-      "price": 1.50,
+      "price": 49.90,
       "img_url": "assets/products/gaming/zelda.jpg",
       "off2x1": false,
       "club": false,
@@ -352,7 +352,7 @@
     },
     {
       "title": "Ratón para juegos",
-      "price": 1.50,
+      "price": 68.20,
       "img_url": "assets/products/gaming/mouse.jpg",
       "off2x1": false,
       "club": false,
@@ -361,7 +361,7 @@
     },
     {
       "title": "Teclado mecánico para juegos",
-      "price": 1.50,
+      "price": 148.75,
       "img_url": "assets/products/gaming/mechanic_keyboard.jpg",
       "off2x1": false,
       "club": false,
@@ -370,16 +370,16 @@
     },
     {
       "title": "Auriculares para juegos",
-      "price": 1.50,
+      "price": 160.20,
       "img_url": "assets/products/gaming/headset_gaming.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "gaming"
     },
     {
       "title": "Alfombrilla para ratón de juegos",
-      "price": 1.50,
+      "price": 15.29,
       "img_url": "assets/products/gaming/mouse_pad.jpg",
       "off2x1": false,
       "club": false,
@@ -388,16 +388,16 @@
     },
     {
       "title": "Silla para juegos",
-      "price": 1.50,
+      "price": 599.90,
       "img_url": "assets/products/gaming/gaming_chair.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "gaming"
     },
     {
       "title": "Control Xbox elite",
-      "price": 1.50,
+      "price": 67.90,
       "img_url": "assets/products/gaming/controller.jpg",
       "off2x1": false,
       "club": false,
@@ -406,10 +406,10 @@
     },
     {
       "title": "Volante para juegos de carreras",
-      "price": 1.50,
+      "price": 114.99,
       "img_url": "assets/products/gaming/gaming_wheel.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "gaming"
     }
@@ -417,16 +417,16 @@
   "hogar": [
     {
       "title": "Sarten antiadherente",
-      "price": 1.50,
+      "price": 39.50,
       "img_url": "assets/products/hogar/sarten.jpg",
       "off2x1": false,
       "club": false,
-      "premium": false,
+      "premium": true,
       "category": "gaming"
     },
     {
       "title": "Cuchillos de acero inoxidable",
-      "price": 1.50,
+      "price": 24.99,
       "img_url": "assets/products/hogar/knives.jpg",
       "off2x1": false,
       "club": false,
@@ -435,7 +435,7 @@
     },
     {
       "title": "Juego de funda de edredón",
-      "price": 1.50,
+      "price": 29.99,
       "img_url": "assets/products/hogar/fundas_cama.jpg",
       "off2x1": false,
       "club": false,
@@ -444,7 +444,7 @@
     },
     {
       "title": "Lámpara de mesa con luz regulable",
-      "price": 1.50,
+      "price": 24.99,
       "img_url": "assets/products/hogar/lamp.jpg",
       "off2x1": false,
       "club": false,
@@ -453,16 +453,16 @@
     },
     {
       "title": "Aspiradora sin bolsa",
-      "price": 1.50,
+      "price": 175.20,
       "img_url": "assets/products/hogar/aspiradora.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "gaming"
     },
     {
       "title": "Alfombra de área",
-      "price": 1.50,
+      "price": 34.99,
       "img_url": "assets/products/hogar/carpet.jpg",
       "off2x1": false,
       "club": false,
@@ -471,7 +471,7 @@
     },
     {
       "title": "Juego de toallas de baño",
-      "price": 1.50,
+      "price": 19.90,
       "img_url": "assets/products/hogar/towels.jpg",
       "off2x1": false,
       "club": false,
@@ -480,19 +480,19 @@
     },
     {
       "title": "Plantas de interior",
-      "price": 1.50,
+      "price": 6.50,
       "img_url": "assets/products/hogar/plant.jpg",
-      "off2x1": false,
+      "off2x1": true,
       "club": false,
       "premium": false,
       "category": "gaming"
     },
     {
       "title": "Organizador de zapatos colgante",
-      "price": 1.50,
+      "price": 21.99,
       "img_url": "assets/products/hogar/organizer.jpg",
       "off2x1": false,
-      "club": false,
+      "club": true,
       "premium": false,
       "category": "gaming"
     }

@@ -169,7 +169,6 @@ function navSelected(navItem) {
 
 function registrationPage() {}
 
-
 function removeGridProducts() {
   const hasProdcuts = document.querySelector(".products_grid_section");
 
@@ -178,11 +177,7 @@ function removeGridProducts() {
   }
 }
 
-
-
 async function loadingProducts(section) {
- 
-
   const data = await getSectionProducts(section);
   const main = document.querySelector("main");
   const products_grid_section = document.createElement("div");
@@ -194,7 +189,7 @@ async function loadingProducts(section) {
   });
 
   main.appendChild(products_grid_section);
-  console.log(data);
+  // console.log(data);
 }
 
 function productCard(data) {
@@ -227,14 +222,16 @@ function productCard(data) {
     const card_product_banner = document.createElement("div");
     card_product_banner.classList.add(`card_product_banner_${offerName}`);
     const oferta = document.createElement("p");
-    oferta.innerHTML = "oferta";
+    oferta.innerHTML = "Oferta";
     const tipoOferta = document.createElement("p");
     if (offerName == "2x1") {
-      tipoOferta.innerHTML = "2x1";
+      tipoOferta.innerHTML = "2x1 !";
     } else {
       tipoOferta.innerHTML = `Clientes ${offerName}`;
     }
 
+    card_product_banner.appendChild(oferta);
+    card_product_banner.appendChild(tipoOferta);
     card.appendChild(card_product_banner);
   }
 
@@ -283,15 +280,96 @@ function productCard(data) {
 
   //TODO: FALTA AGREGAR PRECIO ESPECIAL ACORDE A LA CATEGORIA
 
-  //Div card_product_price BASE
-  const card_product_price = document.createElement("div");
-  card_product_price.classList.add("card_product_price");
+  let priceDiv;
 
-  const price = document.createElement("p");
-  price.innerHTML = producto.price.toFixed(2) + " €";
+  switch (offerName) {
+    case "club":
+      //Div card_product_price_club BASE
+      const card_product_price_club = document.createElement("div");
+      card_product_price_club.classList.add("card_product_price_club");
 
-  //Agregamos el precio al div card_product_price
-  card_product_price.appendChild(price);
+      //Precio original
+      const clubCurrentPrice = document.createElement("p");
+      clubCurrentPrice.innerHTML = producto.price.toFixed(2) + " €";
+
+      //Agregamos el precio original al div BASE
+      card_product_price_club.appendChild(clubCurrentPrice);
+
+      //Div card_product_price_club_discount 
+      const card_product_price_club_discount = document.createElement("div");
+      card_product_price_club_discount.classList.add("card_product_price_club_discount");
+
+      //Descuento aplicado (Club)
+      const clubDiscount = document.createElement("p");
+      clubDiscount.innerHTML = "10% Off!"
+
+      //Precio con descuento aplicado
+      const clubdiscountPrice = document.createElement("p");
+      clubdiscountPrice.innerHTML = (producto.price - (producto.price * parseFloat(".10"))).toFixed(2) + " €";
+
+      //Agregamos los dos datos al div card_product_price_club_discount
+      card_product_price_club_discount.appendChild(clubDiscount);
+      card_product_price_club_discount.appendChild(clubdiscountPrice);
+
+      //Agregamos el div card_product_price_club_discount al div BASE
+      card_product_price_club.appendChild(card_product_price_club_discount);
+
+      //Asignamos el elemento a la variable priceDiv para luego integrarlo
+      priceDiv = card_product_price_club;
+
+      break;
+    case "premium":
+
+     //Div card_product_price_club BASE
+     const card_product_price_premium = document.createElement("div");
+     card_product_price_premium.classList.add("card_product_price_premium");
+
+     //Precio original
+     const premiumCurrentPrice = document.createElement("p");
+     premiumCurrentPrice.innerHTML = producto.price.toFixed(2) + " €";
+
+     //Agregamos el precio original al div BASE
+     card_product_price_premium.appendChild(premiumCurrentPrice);
+
+     //Div card_product_price_premium_discount 
+     const card_product_price_premium_discount = document.createElement("div");
+     card_product_price_premium_discount.classList.add("card_product_price_premium_discount");
+
+     //Descuento aplicado (Premium)
+     const premiumDiscount = document.createElement("p");
+     premiumDiscount.innerHTML = "15% Off!"
+
+     //Precio con descuento aplicado
+     const premiumdiscountPrice = document.createElement("p");
+     premiumdiscountPrice.innerHTML = (producto.price - (producto.price * parseFloat(".15"))).toFixed(2) + " €";
+
+     //Agregamos los dos datos al div card_product_price_premium_discount
+     card_product_price_premium_discount.appendChild(premiumDiscount);
+     card_product_price_premium_discount.appendChild(premiumdiscountPrice);
+
+     //Agregamos el div card_product_price_premium_discount al div BASE
+     card_product_price_premium.appendChild(card_product_price_premium_discount);
+
+     //Asignamos el elemento a la variable priceDiv para luego integrarlo
+     priceDiv = card_product_price_premium;
+
+
+      break;
+
+    default:
+      //Div card_product_price BASE
+      const card_product_price = document.createElement("div");
+      card_product_price.classList.add("card_product_price");
+
+      const price = document.createElement("p");
+      price.innerHTML = producto.price.toFixed(2) + " €";
+
+      //Agregamos el precio al div card_product_price
+      card_product_price.appendChild(price);
+
+      priceDiv = card_product_price;
+      break;
+  }
 
   //Div card_product_buy
   const card_product_buy = document.createElement("div");
@@ -310,7 +388,10 @@ function productCard(data) {
   card_product_buy.appendChild(buy_button);
 
   // Agregamos card_product_price a card_product_price_and_buy
-  card_product_price_and_buy.appendChild(card_product_price);
+
+    // console.log(priceDiv);
+
+  card_product_price_and_buy.appendChild(priceDiv);
 
   // Agregamos card_product_buy a card_product_price_and_buy
   card_product_price_and_buy.appendChild(card_product_buy);
@@ -321,7 +402,7 @@ function productCard(data) {
   /* ========================= END card_product_price_and_buy ========================== */
 
   return card;
-  console.log("product Card", producto);
+  // console.log("product Card", producto);
 }
 
 function loading(isLoad) {

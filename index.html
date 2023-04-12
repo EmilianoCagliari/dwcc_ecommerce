@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,9 +185,10 @@
             </nav>
             <div class="user_basket_area">
 
-                <ul class="user_basket_list">
-                    <a href="#">
-                        <li class="user_basket_item" id="user_login">                            
+                <div class="user_basket_list">
+
+                    <!-- <a href="">
+                        <div class="user_basket_item" id="user_login">                            
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -215,11 +217,36 @@
                                     fill="none"></path>
                                 <path d="M6 9l6 6l6 -6"></path>
                             </svg>
-                        </li>
-                    </a>
+                        </div>
+                    </a> -->
+                    
                     <a href="">
-                        <li class="user_basket_item" id="cart">
-                            <span class="cart_item_quantity animate__animated animate__bounce animate__slow">4</span>
+                        <div class="logged_user" id="logged_user">
+
+                            <div class="user_category_banner">
+                                <p>Club</p>
+                            </div>
+
+                            <img src="assets/user_avatar/user_avatar.jpg" alt="">
+                            <div class="logged_user_welcome">
+                                
+                                <p>Nombre Apellido</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="24" viewBox="0 0 24 24" stroke-width="3"
+                                stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none">
+                                </path>
+                                <path d="M6 9l6 6l6 -6"></path>
+                            </svg>
+                        </div>
+                    </a>
+                    
+                    <a href="">
+                        <div class="user_basket_item" id="cart">
+                            <span
+                                class="cart_item_quantity animate__animated animate__bounce animate__slow">4</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" fill="none"
@@ -236,9 +263,10 @@
                                 <path d="M6 5l14 1l-1 7h-13"></path>
                             </svg>
                             0,00 €
-                        </li>
+                        </div>
                     </a>
-                </ul>
+                </div>
+
 
 
                 <!-- Login/Register window -->
@@ -258,16 +286,26 @@
 
                 </div>
 
+                <!-- User/Logout window -->
+
+                <div class="logged_user_panel" id="logged_user_panel">
+                    <button class="btn-outline" id="btn_user_logout">
+                        Cerrar Sesion
+                    </button>
+                </div>
+
                 <!-- Cart Product List window -->
 
-                <div class="cart_product_list_checkout" id="cart_product_list_checkout">
+                <div class="cart_product_list_checkout"
+                    id="cart_product_list_checkout">
                     <div class="checkout_list_header">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="40"
-                                height="40" viewBox="0 0 412.000000 412.000000"
-                                preserveAspectRatio="xMidYMid meet">
-                                <g transform="translate(0.000000,412.000000) scale(0.100000,-0.100000)"
-                                    fill="#574FB4" stroke="none">
-                                    <path d="M1800 4080 c-746 -101 -1380 -608 -1645 -1315 -140 -374 -164 -810
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="40"
+                            viewBox="0 0 412.000000 412.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                            <g transform="translate(0.000000,412.000000) scale(0.100000,-0.100000)"
+                                fill="#574FB4" stroke="none">
+                                <path d="M1800 4080 c-746 -101 -1380 -608 -1645 -1315 -140 -374 -164 -810
                            -66 -1196 170 -672 675 -1219 1327 -1437 115 -39 294 -78 417 -93 132 -15 454
                            -7 577 16 845 153 1508 817 1655 1657 24 136 38 344 25 382 -24 73 -110 107
                            -179 72 -46 -24 -58 -63 -70 -223 -6 -78 -20 -184 -30 -235 -144 -696 -701
@@ -289,102 +327,157 @@
                            -476 987 -167 1454 69 105 212 250 310 315 163 109 340 171 532 188 65 6 139
                            15 165 20 196 39 346 223 347 425 1 167 -101 324 -257 398 -66 31 -72 32 -218
                            34 -82 1 -179 -3 -215 -7z" />
-                                </g>
-                            </svg>
+                            </g>
+                        </svg>
                         <p>Super Cono - Checkout List</p>
                     </div>
                     <div class="checkout_list_main">
 
                         <div class="checkout_product_item">
                             <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg" alt="">
+                            <img src="assets/products/gaming/controller.jpg"
+                                alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
                             <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-trash-x"
+                                    width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"
+                                        fill="none"></path>
                                     <path d="M4 7h16"></path>
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                    <path
+                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                    </path>
+                                    <path
+                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                    </path>
                                     <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                 </svg>
+                                </svg>
 
                             </button>
                         </div>
-                       
+
                         <div class="checkout_product_item">
                             <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg" alt="">
+                            <img src="assets/products/gaming/controller.jpg"
+                                alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
                             <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-trash-x"
+                                    width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"
+                                        fill="none"></path>
                                     <path d="M4 7h16"></path>
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                    <path
+                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                    </path>
+                                    <path
+                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                    </path>
                                     <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                 </svg>
+                                </svg>
 
                             </button>
                         </div>
-                       
+
                         <div class="checkout_product_item">
                             <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg" alt="">
+                            <img src="assets/products/gaming/controller.jpg"
+                                alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
                             <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-trash-x"
+                                    width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"
+                                        fill="none"></path>
                                     <path d="M4 7h16"></path>
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                    <path
+                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                    </path>
+                                    <path
+                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                    </path>
                                     <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                 </svg>
+                                </svg>
 
                             </button>
                         </div>
-                       
+
                         <div class="checkout_product_item">
                             <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg" alt="">
+                            <img src="assets/products/gaming/controller.jpg"
+                                alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
                             <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-trash-x"
+                                    width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"
+                                        fill="none"></path>
                                     <path d="M4 7h16"></path>
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                    <path
+                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                    </path>
+                                    <path
+                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                    </path>
                                     <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                 </svg>
+                                </svg>
 
                             </button>
                         </div>
-                       
+
                         <div class="checkout_product_item">
                             <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg" alt="">
+                            <img src="assets/products/gaming/controller.jpg"
+                                alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
                             <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-trash-x"
+                                    width="24" height="24" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor"
+                                    fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z"
+                                        fill="none"></path>
                                     <path d="M4 7h16"></path>
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+                                    <path
+                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
+                                    </path>
+                                    <path
+                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
+                                    </path>
                                     <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                 </svg>
+                                </svg>
 
                             </button>
                         </div>
-                       
+
                     </div>
 
                     <div class="checkout_list_total">
@@ -393,7 +486,8 @@
                             <p>236,65 €</p>
                         </div>
                     </div>
-                    <button class="btn-outline" id="btn_checkout">Checkout</button>
+                    <button class="btn-outline"
+                        id="btn_checkout">Checkout</button>
                 </div>
 
 
@@ -501,7 +595,7 @@
 
         <!-- <h2 style="text-align: center; margin: 20px 0px;">No se encontraron productos</h2> -->
 
-       
+
 
         <div class="modal">
             <div class="modal_card">

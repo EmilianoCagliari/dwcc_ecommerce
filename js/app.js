@@ -1,12 +1,12 @@
 const pb = new PocketBase("http://127.0.0.1:8090");
 
 window.onload = () => {
-  console.log("Cargado DOM");
+  // console.log("Cargado DOM");
 
   // test();
 
   if (localStorage.getItem("products") == null) {
-    console.log("1er localstorage");
+    // console.log("1er localstorage");
     pageNav();
   }
 
@@ -16,71 +16,108 @@ window.onload = () => {
     document.querySelector(".modal").style.display = "none";
   });
 
-  document.querySelector("#user_login").addEventListener("click", (e) => {
-    e.preventDefault();
-    const uPanel = document.querySelector("#user_login_panel");
+  if (document.querySelector("#user_login") != undefined) {
+    document.querySelector("#user_login").addEventListener("click", (e) => {
+      e.preventDefault();
+      const uPanel = document.querySelector("#user_login_panel");
 
-    if (uPanel.style.display === "none") {
-      uPanel.style.display = "flex";
-      document.querySelector("#user_login").classList.add("active");
-      
-    } else {
-      uPanel.style.display = "none";
-    }
+      if (uPanel.style.display === "none") {
+        uPanel.style.display = "flex";
+        document.querySelector("#user_login").classList.add("active");
+      } else {
+        uPanel.style.display = "none";
+      }
 
-    document.querySelector("#btn_user_register").addEventListener("click", () => {
-      window.location = "/register.html";
-      registrationPage();
-      console.log("register button");
+      document
+        .querySelector("#btn_user_register")
+        .addEventListener("click", () => {
+          window.location = "/register.html";
+          registrationPage();
+          console.log("register button");
+        });
+
+      document
+        .querySelector("#btn_user_login")
+        .addEventListener("click", () => {
+          uPanel.style.display = "none";
+          document.querySelector(".modal").style.display = "flex";
+        });
+      // console.log("display", uPanel.computedStyleMap().get("display").value );
     });
 
-    document.querySelector("#btn_user_login").addEventListener("click", () => {
-      uPanel.style.display = "none";
-      document.querySelector(".modal").style.display = "flex";
+    document.addEventListener("mouseup", function (e) {
+      const uPanel = document.querySelector("#user_login_panel");
+
+      if (!uPanel.contains(e.target)) {
+        uPanel.style.display = "none";
+        document.querySelector("#user_login").classList.remove("active");
+      }
     });
-    // console.log("display", uPanel.computedStyleMap().get("display").value );
-  });
+  }
 
+  if (document.querySelector("#cart")) {
+    document.querySelector("#cart").addEventListener("click", (e) => {
+      e.preventDefault();
 
-  document.querySelector("#cart").addEventListener("click", (e) => {
-    e.preventDefault();
+      const cart_checkout = document.querySelector(
+        "#cart_product_list_checkout"
+      );
 
+      if (cart_checkout.style.display === "none") {
+        document.querySelector("#cart").classList.add("active");
+        cart_checkout.style.display = "flex";
+      } else {
+        cart_checkout.style.display = "none";
+      }
 
-    const cart_checkout = document.querySelector("#cart_product_list_checkout");
-
-    if(cart_checkout.style.display === "none") {
-      document.querySelector("#cart").classList.add("active");
-      cart_checkout.style.display = "flex";
-      
-    } else {
-      cart_checkout.style.display = "none";
-
-    }
-
-    document.querySelector("#btn_checkout").addEventListener("click", () => {
-      console.log("Checkout button");
+      document.querySelector("#btn_checkout").addEventListener("click", () => {
+        console.log("Checkout button");
+      });
     });
 
-  });
+    document.addEventListener("mouseup", function (e) {
+      const cart_checkout = document.querySelector(
+        "#cart_product_list_checkout"
+      );
 
+      if (!cart_checkout.contains(e.target)) {
+        cart_checkout.style.display = "none";
+        document.querySelector("#cart").classList.remove("active");
+      }
+    });
+  }
 
+  if (document.querySelector("#logged_user")) {
+    document.querySelector("#logged_user").addEventListener("click", (e) => {
+      e.preventDefault();
 
+      const logged_user_panel = document.querySelector(
+        "#logged_user_panel"
+      );
 
-  document.addEventListener("mouseup", function (e) {
-    const uPanel = document.querySelector("#user_login_panel");
-    const cart_checkout = document.querySelector("#cart_product_list_checkout");
+      if (logged_user_panel.style.display === "none") {
+        document.querySelector("#logged_user").classList.add("active");
+        logged_user_panel.style.display = "flex";
+      } else {
+        logged_user_panel.style.display = "none";
+      }
 
+      document.querySelector("#btn_user_logout").addEventListener("click", () => {
+        console.log("Logout button");
+      });
+    });
 
-    if (!uPanel.contains(e.target)) {
-      uPanel.style.display = "none";
-      document.querySelector("#user_login").classList.remove("active");      
+    document.addEventListener("mouseup", function (e) {
+      const logged_user_panel = document.querySelector(
+        "#logged_user_panel"
+      );
 
-    }
-    if(!cart_checkout.contains(e.target)) {
-      cart_checkout.style.display = "none"
-      document.querySelector("#cart").classList.remove("active");      
-    }
-  });
+      if (!logged_user_panel.contains(e.target)) {
+        logged_user_panel.style.display = "none";
+        document.querySelector("#logged_user").classList.remove("active");
+      }
+    });
+  }
 };
 
 // const { range, filter, map } = rxjs;
@@ -329,17 +366,20 @@ function productCard(data) {
       //Agregamos el precio original al div BASE
       card_product_price_club.appendChild(clubCurrentPrice);
 
-      //Div card_product_price_club_discount 
+      //Div card_product_price_club_discount
       const card_product_price_club_discount = document.createElement("div");
-      card_product_price_club_discount.classList.add("card_product_price_club_discount");
+      card_product_price_club_discount.classList.add(
+        "card_product_price_club_discount"
+      );
 
       //Descuento aplicado (Club)
       const clubDiscount = document.createElement("p");
-      clubDiscount.innerHTML = "10% Off!"
+      clubDiscount.innerHTML = "10% Off!";
 
       //Precio con descuento aplicado
       const clubdiscountPrice = document.createElement("p");
-      clubdiscountPrice.innerHTML = (producto.price - (producto.price * parseFloat(".10"))).toFixed(2) + " €";
+      clubdiscountPrice.innerHTML =
+        (producto.price - producto.price * parseFloat(".10")).toFixed(2) + " €";
 
       //Agregamos los dos datos al div card_product_price_club_discount
       card_product_price_club_discount.appendChild(clubDiscount);
@@ -353,40 +393,43 @@ function productCard(data) {
 
       break;
     case "premium":
+      //Div card_product_price_club BASE
+      const card_product_price_premium = document.createElement("div");
+      card_product_price_premium.classList.add("card_product_price_premium");
 
-     //Div card_product_price_club BASE
-     const card_product_price_premium = document.createElement("div");
-     card_product_price_premium.classList.add("card_product_price_premium");
+      //Precio original
+      const premiumCurrentPrice = document.createElement("p");
+      premiumCurrentPrice.innerHTML = producto.price.toFixed(2) + " €";
 
-     //Precio original
-     const premiumCurrentPrice = document.createElement("p");
-     premiumCurrentPrice.innerHTML = producto.price.toFixed(2) + " €";
+      //Agregamos el precio original al div BASE
+      card_product_price_premium.appendChild(premiumCurrentPrice);
 
-     //Agregamos el precio original al div BASE
-     card_product_price_premium.appendChild(premiumCurrentPrice);
+      //Div card_product_price_premium_discount
+      const card_product_price_premium_discount = document.createElement("div");
+      card_product_price_premium_discount.classList.add(
+        "card_product_price_premium_discount"
+      );
 
-     //Div card_product_price_premium_discount 
-     const card_product_price_premium_discount = document.createElement("div");
-     card_product_price_premium_discount.classList.add("card_product_price_premium_discount");
+      //Descuento aplicado (Premium)
+      const premiumDiscount = document.createElement("p");
+      premiumDiscount.innerHTML = "15% Off!";
 
-     //Descuento aplicado (Premium)
-     const premiumDiscount = document.createElement("p");
-     premiumDiscount.innerHTML = "15% Off!"
+      //Precio con descuento aplicado
+      const premiumdiscountPrice = document.createElement("p");
+      premiumdiscountPrice.innerHTML =
+        (producto.price - producto.price * parseFloat(".15")).toFixed(2) + " €";
 
-     //Precio con descuento aplicado
-     const premiumdiscountPrice = document.createElement("p");
-     premiumdiscountPrice.innerHTML = (producto.price - (producto.price * parseFloat(".15"))).toFixed(2) + " €";
+      //Agregamos los dos datos al div card_product_price_premium_discount
+      card_product_price_premium_discount.appendChild(premiumDiscount);
+      card_product_price_premium_discount.appendChild(premiumdiscountPrice);
 
-     //Agregamos los dos datos al div card_product_price_premium_discount
-     card_product_price_premium_discount.appendChild(premiumDiscount);
-     card_product_price_premium_discount.appendChild(premiumdiscountPrice);
+      //Agregamos el div card_product_price_premium_discount al div BASE
+      card_product_price_premium.appendChild(
+        card_product_price_premium_discount
+      );
 
-     //Agregamos el div card_product_price_premium_discount al div BASE
-     card_product_price_premium.appendChild(card_product_price_premium_discount);
-
-     //Asignamos el elemento a la variable priceDiv para luego integrarlo
-     priceDiv = card_product_price_premium;
-
+      //Asignamos el elemento a la variable priceDiv para luego integrarlo
+      priceDiv = card_product_price_premium;
 
       break;
 
@@ -423,7 +466,7 @@ function productCard(data) {
 
   // Agregamos card_product_price a card_product_price_and_buy
 
-    // console.log(priceDiv);
+  // console.log(priceDiv);
 
   card_product_price_and_buy.appendChild(priceDiv);
 

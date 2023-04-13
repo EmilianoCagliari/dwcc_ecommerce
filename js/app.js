@@ -7,8 +7,19 @@ window.onload = () => {
 
   if (localStorage.getItem("products") == null) {
     // console.log("1er localstorage");
-    pageNav();
+    createLocalStorage("b", "c");
+
+    if( document.querySelector("#user_login")) {
+      document.querySelector("#user_login").replaceWith(
+        loggedUserComponent("club","assets/user_avatar/user_avatar.jpg","Maria Angeles Diaz" )
+      );
+      // const b_list = document.querySelector(".user_basket_list");
+      // b_list.appendChild()
+    }
+
+
   }
+  pageNav();
 
   document.querySelector("nav").addEventListener("click", pageNav);
 
@@ -459,7 +470,7 @@ function productCard(data) {
   buy_button.classList.add("btn_product_buy");
 
   //Agregamos el SVG dentro del boton
-  buy_button.appendChild(svgElement());
+  buy_button.appendChild(svgCart());
 
   card_product_buy.appendChild(p_agregar_carrito);
   card_product_buy.appendChild(buy_button);
@@ -477,33 +488,106 @@ function productCard(data) {
   card.appendChild(card_product_price_and_buy);
 
   /* ========================= END card_product_price_and_buy ========================== */
-
+  
   return card;
   // console.log("product Card", producto);
 }
+
+
+
+
+/* ========================= Components and icons SVG ========================== */
+
+
 
 function loading(isLoad) {
   document.querySelector(".loader").style.display = isLoad ? "flex" : "none";
 }
 
-function svgElement() {
+
+          /* ========= Logged User Component ========= */
+
+function loggedUserComponent( category, imgUrl, userName) {
+
+  const hasCategory = (category.length > 0);
+  console.log(hasCategory);
+  /**
+   *  Base DIV
+   **/
+  const logged_user = document.createElement("div");
+  logged_user.classList.add("logged_user");
+  logged_user.id = "logged_user";
+
+  /**
+   *  Category Banner - Club - Premium 
+   *  Se agrega si tiene perfil club o premium 
+   **/
+
+  const user_category_banner = document.createElement("div");
+  if (hasCategory) {
+    user_category_banner.classList.add("user_category_banner");
+    const p_user_category_banner = document.createElement("p");
+    p_user_category_banner.innerHTML = category;
+
+    user_category_banner.appendChild(p_user_category_banner);
+
+  }
+  
+
+  /**
+   *  User img avatar
+   */
+
+  const img = document.createElement("img");
+  img.src = imgUrl;
+
+  /**
+   *  User Name DIV
+   */
+  
+  const logged_user_welcome = document.createElement("div");
+  logged_user_welcome.classList.add("logged_user_welcome");
+
+  const p_logged_user_welcome = document.createElement("p");
+  p_logged_user_welcome.innerHTML = userName;
+
+  logged_user_welcome.appendChild(p_logged_user_welcome);
+  /**
+   * Agregando componentes a logged_user
+   */
+
+  if(hasCategory){
+    logged_user.appendChild(user_category_banner);
+  }
+
+  logged_user.appendChild(img);
+  logged_user.appendChild(logged_user_welcome);
+  logged_user.appendChild( svgChevronDown() );
+
+
+  return logged_user;
+}
+
+
+
+function svgCart() {
   // Crea un nuevo elemento SVG
-  var svgElement = document.createElementNS(
+  const svgCart = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "svg"
   );
-  svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-  svgElement.setAttribute("width", "24");
-  svgElement.setAttribute("height", "24");
-  svgElement.setAttribute("viewBox", "0 0 24 24");
-  svgElement.setAttribute("stroke-width", "2");
-  svgElement.setAttribute("stroke", "#ffffff");
-  svgElement.setAttribute("fill", "none");
-  svgElement.setAttribute("stroke-linecap", "round");
-  svgElement.setAttribute("stroke-linejoin", "round");
+  svgCart.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  svgCart.setAttribute("width", "24");
+  svgCart.setAttribute("height", "24");
+  svgCart.setAttribute("viewBox", "0 0 24 24");
+  svgCart.setAttribute("stroke-width", "2");
+  svgCart.setAttribute("stroke", "#ffffff");
+  svgCart.setAttribute("fill", "none");
+  svgCart.setAttribute("stroke-linecap", "round");
+  svgCart.setAttribute("stroke-linejoin", "round");
 
   // Agrega los elementos <path> al SVG
-  svgElement.innerHTML = `
+  svgCart.innerHTML = `
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
       <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
@@ -512,7 +596,34 @@ function svgElement() {
       <path d="M15 6h6m-3 -3v6"></path>
   `;
 
-  return svgElement;
+  return svgCart;
+}
+
+
+function svgChevronDown(){
+  const svgChevronDown = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "svg"
+  );
+
+  svgChevronDown.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  svgChevronDown.setAttribute("width", "16");
+  svgChevronDown.setAttribute("height", "24");
+  svgChevronDown.setAttribute("viewBox", "0 0 24 24");
+  svgChevronDown.setAttribute("stroke-width", "3");
+  svgChevronDown.setAttribute("stroke", "currentColor");
+  svgChevronDown.setAttribute("fill", "none");
+  svgChevronDown.setAttribute("stroke-linecap", "round");
+  svgChevronDown.setAttribute("stroke-linejoin", "round");
+
+  // Agrega los elementos <path> al SVG
+  svgChevronDown.innerHTML = `
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M6 9l6 6l6 -6"></path>
+  `;
+
+  return svgChevronDown;
+
 }
 
 // ================= JSON Database Area  =================

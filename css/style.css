@@ -215,9 +215,11 @@ nav {
   justify-content: space-evenly;
   font-size: 14px;
   height: 40px;
+  width: fit-content;
   padding: 0px 3px;
   flex: 1;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 
@@ -238,6 +240,7 @@ nav {
   /* height: 40px; */
   padding: 0px 3px;
   flex: 1;
+  cursor: pointer;
   transition: 0.2s ease;
 }
 
@@ -258,20 +261,20 @@ nav {
 }
 
 .logged_user_welcome {
-  text-align: justify;
+  text-align: center;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   align-self: flex-end;
+  padding-bottom: 5px;
+  word-break: break-word;
 }
 
-.logged_user_welcome > p {
-  margin-bottom: 5px;
-}
+
 
 
 .user_category_banner {
   position: absolute;
-  top: -10px;
+  top: -15px;
   left: 20%;
   border-radius: 5px;
   background-color: #ff6a00;
@@ -290,8 +293,9 @@ nav {
   flex-direction: column;
   align-items: center;
   top: 80px;
-  width: 200px;
-  height: 100px;
+  right: 40%;
+  /* width: 10%; */
+  /* height: 100px; */
   background-color: #ffffff;
   border-top: 1px dashed #574fB4;
   /* border-radius: 5px; */
@@ -311,7 +315,7 @@ nav {
 .cart_item_quantity {
   position: relative;
   top: -15px;
-  left: 35px;
+  left: 15px;
   
   display: flex;
   align-items: center;
@@ -320,12 +324,12 @@ nav {
   color: #ffffff;
   width: 20px;
   height: 20px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   background-color: red;
   /* border: 2px solid #574fB4; */
   border-radius: 100%;
-  z-index: 4;
+  z-index: 3;
 }
 
 /* unvisited link */
@@ -339,16 +343,16 @@ nav {
 }
 
 /* mouse over link */
-.user_basket_list > a:hover {
+.user_basket_list > .user_basket_item:hover {
   color: #574fb4;
   font-weight: bold;
 }
 
 /* selected link */
-.user_basket_list > a:active {
-  /* background-color: #574fb4; */
+/* .user_basket_list > a:active {
+  background-color: #574fb4;
   color: blue;
-}
+} */
 
 /* LOGIN PANEL SECTION */
 
@@ -1080,6 +1084,15 @@ font-weight: 600;
     align-items: center;
     justify-items: center;
     margin: 15px;
+  }
+
+  .logged_user_welcome {
+    /* text-align: center; */
+    font-weight: 800;
+    font-size: 10px;
+    align-self: flex-end;
+    padding-bottom: 5px;
+    word-break: break-word;
   }
   
 }

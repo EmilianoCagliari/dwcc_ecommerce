@@ -85,6 +85,22 @@
           "max": null,
           "pattern": ""
         }
+      },
+      {
+        "id": "gl5cjiue",
+        "name": "club",
+        "type": "bool",
+        "system": false,
+        "required": false,
+        "options": {}
+      },
+      {
+        "id": "aysjg45n",
+        "name": "premium",
+        "type": "bool",
+        "system": false,
+        "required": false,
+        "options": {}
       }
     ],
     "indexes": [],

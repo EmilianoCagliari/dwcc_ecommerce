@@ -85,6 +85,7 @@ function successMsg(msg, status) {
   const modal = document.createElement("div");
   modal.classList.add("modal");
   modal.style.display = "flex";
+  modal.style.top = `${window.top.scrollY}px`;
 
   const modal_card = document.createElement("div");
   modal_card.classList.add("modal_card");

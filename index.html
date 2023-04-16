@@ -225,7 +225,6 @@
                         </svg>
                         <!-- <span class="cart_item_quantity animate__animated animate__bounce animate__slow">4</span> -->
 
-
                         <svg xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" fill="none"
@@ -239,7 +238,9 @@
                             <path d="M17 17h-11v-14h-2"></path>
                             <path d="M6 5l14 1l-1 7h-13"></path>
                         </svg>
-                        0,00 €
+                        <p id="cart_total_nav">
+                            0,00 €
+                        </p>
                     </div>
                 </div>
 
@@ -274,6 +275,7 @@
 
                 <div class="cart_product_list_checkout"
                     id="cart_product_list_checkout">
+
                     <div class="checkout_list_header">
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="40" height="40"
@@ -307,14 +309,19 @@
                         </svg>
                         <p>Super Cono - Checkout List</p>
                     </div>
-                    <div class="checkout_list_main">
+                    
+                    <div class="checkout_list_main" id="checkout_list_main">
 
-                        <div class="checkout_product_item">
-                            <p>1</p>
+                        <h2 class="checkout_no_product_item" id="checkout_no_product_item">No hay productos agregados, elige tus articulos!</h2>
+
+
+                        <!--<div class="checkout_product_item">
+                           
                             <img src="assets/products/gaming/controller.jpg"
                                 alt="">
                             <p>Control Xbox elite</p>
                             <p>67.90 €</p>
+
                             <button class="btn_product_delete">
 
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -336,134 +343,21 @@
                                 </svg>
 
                             </button>
-                        </div>
 
-                        <div class="checkout_product_item">
-                            <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg"
-                                alt="">
-                            <p>Control Xbox elite</p>
-                            <p>67.90 €</p>
-                            <button class="btn_product_delete">
 
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-trash-x"
-                                    width="24" height="24" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor"
-                                    fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z"
-                                        fill="none"></path>
-                                    <path d="M4 7h16"></path>
-                                    <path
-                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
-                                    </path>
-                                    <path
-                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
-                                    </path>
-                                    <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                </svg>
+                        </div>-->
 
-                            </button>
-                        </div>
-
-                        <div class="checkout_product_item">
-                            <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg"
-                                alt="">
-                            <p>Control Xbox elite</p>
-                            <p>67.90 €</p>
-                            <button class="btn_product_delete">
-
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-trash-x"
-                                    width="24" height="24" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor"
-                                    fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z"
-                                        fill="none"></path>
-                                    <path d="M4 7h16"></path>
-                                    <path
-                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
-                                    </path>
-                                    <path
-                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
-                                    </path>
-                                    <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                </svg>
-
-                            </button>
-                        </div>
-
-                        <div class="checkout_product_item">
-                            <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg"
-                                alt="">
-                            <p>Control Xbox elite</p>
-                            <p>67.90 €</p>
-                            <button class="btn_product_delete">
-
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-trash-x"
-                                    width="24" height="24" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor"
-                                    fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z"
-                                        fill="none"></path>
-                                    <path d="M4 7h16"></path>
-                                    <path
-                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
-                                    </path>
-                                    <path
-                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
-                                    </path>
-                                    <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                </svg>
-
-                            </button>
-                        </div>
-
-                        <div class="checkout_product_item">
-                            <p>1</p>
-                            <img src="assets/products/gaming/controller.jpg"
-                                alt="">
-                            <p>Control Xbox elite</p>
-                            <p>67.90 €</p>
-                            <button class="btn_product_delete">
-
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon icon-tabler icon-tabler-trash-x"
-                                    width="24" height="24" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor"
-                                    fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z"
-                                        fill="none"></path>
-                                    <path d="M4 7h16"></path>
-                                    <path
-                                        d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12">
-                                    </path>
-                                    <path
-                                        d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3">
-                                    </path>
-                                    <path d="M10 12l4 4m0 -4l-4 4"></path>
-                                </svg>
-
-                            </button>
-                        </div>
+                         
 
                     </div>
 
-                    <div class="checkout_list_total">
-                        <div class="checkout_list_total_price">
+                    <div class="checkout_list_total" id="checkout_list_total">
+                        <!-- <div class="checkout_list_total_price">
                             <p>Total:</p>
                             <p>236,65 €</p>
-                        </div>
+                        </div> -->
                     </div>
-                    <button class="btn-outline"
-                        id="btn_checkout">Checkout</button>
+                    <button class="btn-outline" id="btn_checkout">Checkout</button>
                 </div>
 
 

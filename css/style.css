@@ -415,7 +415,7 @@ nav {
 
 .checkout_product_item {
   display: grid;
-  grid-template-columns: 10% 10% 40% 25% 10%;
+  grid-template-columns: 20% 40% 25% 10%;
   column-gap: 5px;
   margin: 10px 0px;
   justify-items: center;
@@ -452,6 +452,11 @@ nav {
 }
 .checkout_product_item > p:nth-child(4) {
   font-size: 15px;
+}
+
+.checkout_no_product_item {
+  text-align: center;
+  margin: 30px 5px;
 }
 
 .checkout_list_total {
@@ -914,6 +919,7 @@ nav {
 }
 .btn_product_delete > svg {
   stroke: #574fb4;
+  pointer-events: none;
 }
 
 .btn_product_delete:hover {

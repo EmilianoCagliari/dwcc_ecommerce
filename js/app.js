@@ -5,20 +5,42 @@ window.onload = () => {
 
   // test();
 
-  if (localStorage.getItem("products") == null) {
-    // console.log("1er localstorage");
-    createLocalStorage("b", "c");
+  document.querySelector("#login").addEventListener("click", loginUser);
 
-    if( document.querySelector("#user_login")) {
-      document.querySelector("#user_login").replaceWith(
-        loggedUserComponent("club","assets/user_avatar/user_avatar.jpg","Maria Angeles Diaz" )
-      );
+  /**
+   *   ======  CHECK IF USER IS LOGGED IN ========
+   */
+
+  if (checkLocalStorage("login_token") != null) {
+    // console.log("1er localstorage");
+
+    const cart_item_quantity_value = document.querySelector("#cart_item_quantity_value");
+    const cart = checkLocalStorage("cart");
+     if(cart != null) {
+      const objCart = JSON.parse(cart);
+      console.log(objCart);
+      if( objCart.length >= 10 ){
+        cart_item_quantity_value.setAttribute("x", "2");
+      }
+      cart_item_quantity_value.textContent = objCart.length;
+     }
+    
+
+    if (document.querySelector("#user_login")) {
+      document
+        .querySelector("#user_login")
+        .replaceWith(
+          loggedUserComponent(
+            "club",
+            "assets/user_avatar/no-image.png",
+            "Maria Angeles Diaz"
+          )
+        );
       // const b_list = document.querySelector(".user_basket_list");
       // b_list.appendChild()
     }
-
-
   }
+
   pageNav();
 
   document.querySelector("nav").addEventListener("click", pageNav);
@@ -51,7 +73,9 @@ window.onload = () => {
         .querySelector("#btn_user_login")
         .addEventListener("click", () => {
           uPanel.style.display = "none";
+          document.querySelector(".modal").style.top = `${window.top.scrollY}px`;
           document.querySelector(".modal").style.display = "flex";
+          document.querySelector(".modal").style.zIndex = "300";
         });
       // console.log("display", uPanel.computedStyleMap().get("display").value );
     });
@@ -66,7 +90,15 @@ window.onload = () => {
     });
   }
 
+
+
+
+  /**
+   *  ============= CART PRODUCTS CHECKOUT ==============
+   */
+  
   if (document.querySelector("#cart")) {
+
     document.querySelector("#cart").addEventListener("click", (e) => {
       e.preventDefault();
 
@@ -102,9 +134,7 @@ window.onload = () => {
     document.querySelector("#logged_user").addEventListener("click", (e) => {
       e.preventDefault();
 
-      const logged_user_panel = document.querySelector(
-        "#logged_user_panel"
-      );
+      const logged_user_panel = document.querySelector("#logged_user_panel");
 
       if (logged_user_panel.style.display === "none") {
         document.querySelector("#logged_user").classList.add("active");
@@ -113,15 +143,24 @@ window.onload = () => {
         logged_user_panel.style.display = "none";
       }
 
-      document.querySelector("#btn_user_logout").addEventListener("click", () => {
-        console.log("Logout button");
-      });
+      /**
+       *    ========= LOG OUT USER ==========
+       */
+      document
+        .querySelector("#btn_user_logout")
+        .addEventListener("click", () => {
+          deleteLocalStorage("login_token");
+
+          if(checkLocalStorage("cart") != null) {
+            deleteLocalStorage("cart");
+          }
+          location.reload();
+          console.log("Logout button");
+        });
     });
 
     document.addEventListener("mouseup", function (e) {
-      const logged_user_panel = document.querySelector(
-        "#logged_user_panel"
-      );
+      const logged_user_panel = document.querySelector("#logged_user_panel");
 
       if (!logged_user_panel.contains(e.target)) {
         logged_user_panel.style.display = "none";
@@ -131,14 +170,48 @@ window.onload = () => {
   }
 };
 
-// const { range, filter, map } = rxjs;
+/**
+ *   ============= HEADER FIXED ON SCROLLING ===============
+ */
 
-// range(1, 200)
-//   .pipe(
-//     filter((x) => x % 2 === 1),
-//     map((x) => x + x)
-//   )
-//   .subscribe((x) => console.log(x));
+// Obtener el elemento del encabezado del navegador
+var header = document.querySelector("header");
+
+// Obtener la posición inicial del elemento del encabezado del navegador
+var headerOffsetTop = 100;
+
+// Función para fijar el encabezado del navegador cuando se hace scroll
+function fixHeader() {
+  if (window.pageYOffset >= headerOffsetTop) {
+    // Si el scroll alcanza la posición inicial del encabezado
+    // Se aplica la propiedad CSS 'position: fixed' para fijarlo en la parte superior
+    // header.setAttribute("position", "fixed");
+    // header.setAttribute("background-color", "#ffffff");
+    // header.setAttribute("z-index", "20");
+    // header.setAttribute("min-width", "1024px");
+    // header.setAttribute("width", "80%");
+    // header.setAttribute("top", "0");
+
+    header.style.position = "fixed";
+    header.style.backgroundColor = "#ffffff";
+    header.style.zIndex = 20;
+    header.style.minWidth = "1024px";
+    header.style.width = "80%";
+    header.style.top = "0";
+  } else {
+    // Si el scroll está por debajo de la posición inicial del encabezado
+    // Se aplica la propiedad CSS 'position: static' para que el encabezado siga el flujo normal
+    header.style.position = "static";
+    header.style.removeProperty("backgroundColor");
+    header.style.removeProperty("zIndex");
+    header.style.removeProperty("minWidth");
+    header.style.removeProperty("width");
+    header.style.removeProperty("top");
+  }
+}
+
+// Agregar un evento de scroll para llamar a la función fixHeader() cuando se hace scroll
+window.addEventListener("scroll", fixHeader);
 
 function pageNav(e, def = "supermercado") {
   e == undefined ? "" : e.preventDefault();
@@ -469,6 +542,10 @@ function productCard(data) {
   const buy_button = document.createElement("button");
   buy_button.classList.add("btn_product_buy");
 
+  buy_button.addEventListener("click", () => {
+    addToCart(producto);
+  });
+
   //Agregamos el SVG dentro del boton
   buy_button.appendChild(svgCart());
 
@@ -488,28 +565,21 @@ function productCard(data) {
   card.appendChild(card_product_price_and_buy);
 
   /* ========================= END card_product_price_and_buy ========================== */
-  
+
   return card;
   // console.log("product Card", producto);
 }
 
-
-
-
 /* ========================= Components and icons SVG ========================== */
-
-
 
 function loading(isLoad) {
   document.querySelector(".loader").style.display = isLoad ? "flex" : "none";
 }
 
+/* ========= Logged User Component ========= */
 
-          /* ========= Logged User Component ========= */
-
-function loggedUserComponent( category, imgUrl, userName) {
-
-  const hasCategory = (category.length > 0);
+function loggedUserComponent(category, imgUrl, userName) {
+  const hasCategory = category.length > 0;
   console.log(hasCategory);
   /**
    *  Base DIV
@@ -519,8 +589,8 @@ function loggedUserComponent( category, imgUrl, userName) {
   logged_user.id = "logged_user";
 
   /**
-   *  Category Banner - Club - Premium 
-   *  Se agrega si tiene perfil club o premium 
+   *  Category Banner - Club - Premium
+   *  Se agrega si tiene perfil club o premium
    **/
 
   const user_category_banner = document.createElement("div");
@@ -530,9 +600,7 @@ function loggedUserComponent( category, imgUrl, userName) {
     p_user_category_banner.innerHTML = category;
 
     user_category_banner.appendChild(p_user_category_banner);
-
   }
-  
 
   /**
    *  User img avatar
@@ -544,7 +612,7 @@ function loggedUserComponent( category, imgUrl, userName) {
   /**
    *  User Name DIV
    */
-  
+
   const logged_user_welcome = document.createElement("div");
   logged_user_welcome.classList.add("logged_user_welcome");
 
@@ -556,26 +624,20 @@ function loggedUserComponent( category, imgUrl, userName) {
    * Agregando componentes a logged_user
    */
 
-  if(hasCategory){
+  if (hasCategory) {
     logged_user.appendChild(user_category_banner);
   }
 
   logged_user.appendChild(img);
   logged_user.appendChild(logged_user_welcome);
-  logged_user.appendChild( svgChevronDown() );
-
+  logged_user.appendChild(svgChevronDown());
 
   return logged_user;
 }
 
-
-
 function svgCart() {
   // Crea un nuevo elemento SVG
-  const svgCart = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "svg"
-  );
+  const svgCart = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svgCart.setAttribute("xmlns", "http://www.w3.org/2000/svg");
   svgCart.setAttribute("width", "24");
   svgCart.setAttribute("height", "24");
@@ -599,8 +661,7 @@ function svgCart() {
   return svgCart;
 }
 
-
-function svgChevronDown(){
+function svgChevronDown() {
   const svgChevronDown = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "svg"
@@ -623,7 +684,6 @@ function svgChevronDown(){
   `;
 
   return svgChevronDown;
-
 }
 
 // ================= JSON Database Area  =================
@@ -640,11 +700,136 @@ async function getSectionProducts(section) {
   return resp;
 }
 
+async function loginUser() {
+  const modal_card_main = document.querySelector(".modal_card_main");
+  const error = document.createElement("small");
+
+  const email = document.querySelector("#login_email");
+  const password = document.querySelector("#login_password");
+
+  console.log("email", email.value);
+  console.log("password", password.value);
+
+  email.value == ""
+    ? (email.style.border = "2px solid red")
+    : (email.style.border = "2px solid #574fB4");
+  password.value == ""
+    ? (password.style.border = "2px solid red")
+    : (password.style.border = "2px solid #574fB4");
+
+  if (email.value != "" && password != "") {
+    const data = {
+      identity: email.value,
+      password: password.value,
+    };
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+
+    await fetch(
+      "http://127.0.0.1:8090/api/collections/users/auth-with-password",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        if (response.code != undefined) {
+          if (!document.querySelector("#errorMsg")) {
+            error.innerHTML = response.message;
+            error.style.color = "red";
+            error.id = "errorMsg";
+            modal_card_main.appendChild(error);
+          }
+        } else {
+          const created = createLocalStorage("login_token", response.token);
+          if (created) {
+            location.reload();
+          }
+          console.log("Error");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
+}
+
+/**
+ * Funcion de agregar producto al carrito (crea en localstorage)
+ * @param {*} producto
+ */
+
+function addToCart(producto) {
+  let products = [];
+
+  if (checkLocalStorage("login_token") != undefined) {
+    const hasProducts = checkLocalStorage("cart");
+    if (hasProducts != undefined) {
+      products = JSON.parse(hasProducts);
+      products.push(producto);
+    } else {
+      products.push(producto);
+    }
+
+    animationCartQuantity( products.length );
+    createLocalStorage("cart", JSON.stringify(products));
+
+    // createLocalStorage(producto.title, JSON.stringify(producto));
+  } else {
+    document.querySelector(".modal").style.top = `${window.top.scrollY}px`;
+    document.querySelector(".modal").style.display = "flex";
+    document.querySelector(".modal").style.zIndex = "300";
+    console.log("NO INICIO SESION");
+  }
+}
+
+// ================= SVG ANIMATION  =================
+
+function animationCartQuantity( qty ) {
+  const cart_item_quantity = document.querySelector(".cart_item_quantity");
+  const cart_item_quantity_value = document.querySelector("#cart_item_quantity_value");
+  
+  if( qty >= 10 ){
+    cart_item_quantity_value.setAttribute("x", "2");
+  }
+  cart_item_quantity_value.textContent = qty;
+  // Establecer el centro del rebote
+  const centroX = 50;
+  const centroY = 50;
+
+  // Establecer los valores iniciales y finales para la animación
+  const inicioY = 0;
+  const alturaSalto = 10;
+  const duracion = 1000; // duración de la animación en milisegundos
+
+  const svgAction = [
+    { transform: `translateY(${inicioY}px)` },
+    { transform: `translateY(${inicioY - alturaSalto}px)` },
+    { transform: `translateY(${inicioY}px)` },
+  ];
+
+  const svgTiming = {
+    duration: 250,
+    iterations: 3,
+  };
+
+  cart_item_quantity.animate(svgAction, svgTiming);
+}
+
 // ================= Pocketbase Database Area  =================
 
-async function test() {
-  const authData = await pb
-    .collection("users")
-    .authWithPassword("test@test.com", "test1234");
-  console.log("PocketBase", authData);
+async function pocketBaseLogin(user, pass) {
+  // try {
+  //   const authData = await pb.collection("users").authWithPassword(user, pass);
+  //   console.log("PocketBase", authData);
+  //   return true;
+  // } catch (error) {
+  //   console.log(error);
+  //   return false;
+  // }
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -256,7 +257,7 @@
         <!-- Nav Title Banner -->
         <div class="nav_title_banner">
             <img src="assets/nav_imgs/registracion.jpg" alt="">
-            <h2>Registración</h2>
+            <h2>Registro</h2>
         </div>
 
 
@@ -264,34 +265,34 @@
 
         <form class="register_form" method="post">
             <label for="full_name">Nombre Completo
-                <input type="text" class="input" id="full_name" name="full_name" placeholder="Nombre y Apellidos" required >
+                <input type="text" class="input" id="full_name" name="full_name" placeholder="Nombre y Apellidos" required value="Test test test">
             </label>
             <label for="email">Correo Electronico
-                <input type="email" class="input" id="email" name="email" placeholder="test@test.com" required >
+                <input type="email" class="input" id="email" name="email" placeholder="test@test.com" required value="test1@test.com">
             </label>
             <label for="dni">DNI
-                <input type="text" class="input" id="dni" name="dni" placeholder="12345678X" required>
+                <input type="text" class="input" id="dni" name="dni" placeholder="12345678X" required value="123456789X">
             </label>
             <label for="address">Direccion
-                <input type="text" class="input" id="address" name="address" placeholder="Calle 123, Provincia, Pais" required>
+                <input type="text" class="input" id="address" name="address" placeholder="Calle 123, Provincia, Pais" required value="Test 123, vigo">
             </label>
             <label for="phone">Telefono
-                <input type="tel" class="input" id="phone" name="phone" placeholder="123-1231-23" required>
+                <input type="tel" class="input" id="phone" name="phone" placeholder="123-1231-23" required value="636 454 696">
             </label>
             <label for="birthday">Fecha de Nacimiento
-                <input type="date" class="input" id="birthday" name="birthday" required>
+                <input type="date" class="input" id="birthday" name="birthday" required value="1989-02-02">
             </label>
             <label for="family_members">Unidad Familiar
-                <input type="number" min="1" max="4" class="input" id="family_members" name="family_members" placeholder="1" required>
+                <input type="number" min="1" max="4" class="input" id="family_members" name="family_members" placeholder="1" required value="4">
             </label>
             <label for="loyalty_number">Nro. Fidelización
-                <input type="text" class="input" id="loyalty_number" name="loyalty_number" placeholder="ES123456789" required>
+                <input type="text" class="input" id="loyalty_number" name="loyalty_number" placeholder="ES123456789" required value="2">
             </label>
             <label for="password">Contraseña
-                <input type="password" class="input" id="password" name="password" placeholder="*******" required>
+                <input type="password" class="input" id="password" name="password" minlength="4" placeholder="*******" required value="adsasd">
             </label>
-            <label for="repeat_password">Repetir Contraseña
-                <input type="password" class="input" id="repeat_password" name="repeat_password" placeholder="*******" required>
+            <label for="passwordConfirm">Repetir Contraseña
+                <input type="password" class="input" id="passwordConfirm" name="passwordConfirm" minlength="4" placeholder="*******" required value="adsasd">
             </label>
 
             <br>
@@ -302,11 +303,25 @@
 
         </form>
 
+        <!-- <div class="modal">
+            <div class="modal_card">
+                <svg xmlns="http://www.w3.org/2000/svg" class="animate__animated animate__backInDown" width="120" height="120" viewBox="0 0 24 24" stroke-width="2" stroke="#29a567" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20.925 13.163a8.998 8.998 0 0 0 -8.925 -10.163a9 9 0 0 0 0 18"></path>
+                    <path d="M9 10h.01"></path>
+                    <path d="M15 10h.01"></path>
+                    <path d="M9.5 15c.658 .64 1.56 1 2.5 1s1.842 -.36 2.5 -1"></path>
+                    <path d="M15 19l2 2l4 -4"></path>
+                 </svg>
+                <h1 style="text-align: center;">¡El registro se ha realizado correctamente!</h1>
+            </div>
+        </div> -->
+
     </main>
 
 
 
-
+    <script src="js/pocketbase/pocketbase.umd.js"></script>
     <script src="js/register.js"></script>
 
 </body>
